@@ -1,6 +1,4 @@
 # This is my portfolio/website
-You can access it at these links:
-- [allancoding.github.io](https://allancoding.github.io/)
-- [allancoding.is-a.dev](https://allancoding.is-a.dev/)
+Accessible here: [https://allancoding.is-a.dev](https://allancoding.is-a.dev/)
 
-```
+See the old version [https://app.allancoding.is-a.dev/v1](https://app.allancoding.is-a.dev/v1)
