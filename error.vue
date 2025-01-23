@@ -9,7 +9,7 @@
 
   onMounted(() => {
     const script = document.createElement('script')
-    script.src = '/404.js'
+    script.src = '/js/404.js'
     script.defer = true
     document.body.appendChild(script)
   })

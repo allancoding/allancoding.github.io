@@ -5,8 +5,8 @@ const minSize = 10;
 const maxSize = 20;
 const minMod = 10;
 const maxMod = 30;
-const columns = 70;
-const stripCount = 50;
+const columns = Math.floor(window.innerWidth / 28);
+const stripCount = Math.floor(window.innerWidth / 38);
 
 /** @type {HTMLCanvasElement} */
 const cnv = document.getElementById("cnv");
@@ -17,6 +17,7 @@ var screenWidth = 100, screenHeight = 100;
 var initialized = false;
 var time = undefined;
 let fadeOpacity = 1;
+let isPageVisible = true;
 const fadeDuration = 1;
 
 const characters = [];
@@ -94,10 +95,8 @@ class Strip {
         this.chars[randomInt(0, this.chars.length)] = randomElement(characters);
         this.chars[randomInt(0, this.chars.length)] = randomElement(characters);
         const hs = screenWidth / 2;
-        const scale = 1.00 //+ 0.001 * this.fontSize / (maxSize - minSize)
+        const scale = 1.00;
         this.y = (screenHeight - this.chars.length * this.fontSize) / 2;
-        //        this.fontSize *= scale;
-        //        this.fontSize += dt * this.fontSize / this.chars.length
         this.x = (this.x - hs) * scale + hs;
         if (this.time > this.delay) {
             this.time -= this.delay;
@@ -121,8 +120,8 @@ function init() {
 
 function fadeTransition(dt) {
     if (fadeOpacity > 0) {
-        fadeOpacity -= dt / fadeDuration; // Gradually reduce opacity
-        fadeOpacity = Math.max(0, fadeOpacity); // Ensure it doesn't go below 0
+        fadeOpacity -= dt / fadeDuration;
+        fadeOpacity = Math.max(0, fadeOpacity);
         ctx.fillStyle = `rgba(0, 0, 0, ${fadeOpacity})`;
         ctx.fillRect(0, 0, screenWidth, screenHeight);
     }
@@ -137,6 +136,11 @@ function redraw() {
     } else {
         dt = currTime - time;
         time = currTime;
+    }
+
+    const maxDt = 0.1;
+    if (dt > maxDt) {
+        dt = maxDt;
     }
 
     clearScreen();
@@ -156,6 +160,12 @@ function updateCanvas() {
     init();
 }
 
+document.addEventListener('visibilitychange', function () {
+    isPageVisible = !document.hidden;
+    if (isPageVisible) {
+        time = new Date().getTime() / 1000;
+    }
+});
 
 window.addEventListener("resize", updateCanvas);
 updateCanvas();
