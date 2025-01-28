@@ -16,6 +16,7 @@ html, body {
     z-index: 1000;
     animation: fadeIn 1s forwards;
 }
+
 .navbar a {
     float: left;
     display: block;
@@ -24,38 +25,55 @@ html, body {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
-.navbar a:hover {
+
+.navbar a:hover, .navbar .icon {
     color: #00ff00;
     text-shadow: 0 0 10px #00ff00, 0 0 40px #00ff00;
 }
+
 .navbar .icon {
     display: none;
 }
 
+.navbar a:active {
+    -webkit-tap-highlight-color: transparent;
+}
+
 @media screen and (max-width: 600px) {
+    .links {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+
     .navbar a { 
         float: none; 
         position: sticky;
         text-align: left; 
+        display: none;
     }
+    
     .navbar .icon {
         display: block;
+        position: relative;
+        right: 0;
         float: right;
         padding: 14px 20px;
-        background-color: #333;
         cursor: pointer;
-    }
-    .navbar.responsive { position: relative; }
-    .navbar.responsive .icon {
-        position: absolute;
-        right: 0;
         top: 0;
     }
-    .navbar.responsive a {
+    
+    .navbar .responsive a {
         display: block;
-        text-align: left;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        padding: 14px 20px;
+    }
+
+    .navbar .responsive a.show {
+        transform: translateX(0);
     }
 }
 

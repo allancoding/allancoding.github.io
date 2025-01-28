@@ -2,14 +2,16 @@
     <title>Allan Coding!</title>
     <div>
         <canvas id="cnv"></canvas>
-        <div class="navbar blur" id="navbar">
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        <div class="navbar blur">
+            <a href="javascript:void(0);" class="icon" id="navbarIcon" onclick="toggleNavbar()">
                 &#9776;
             </a>
+            <div class="links" id="navbarLinks">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
         </div>
         <div class="content">
             <div class="home">
