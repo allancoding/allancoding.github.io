@@ -20,7 +20,9 @@
         <div class="content">
             <div class="home">
                 <h1>allancoding</h1>
-                <p>Welcome to my portfolio!</p>
+                <p>Welcome to my portfolio!
+                    All testing and development is done by me, Allan.
+                </p>
             </div>
         </div>
     </div>
