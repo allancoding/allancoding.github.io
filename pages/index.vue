@@ -12,6 +12,10 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
+            <a href="#home" class="logo">
+                <img src="/logos/allancoding.png" id="main-logo" alt="Logo">
+                Allan Coding!
+            </a>
         </div>
         <div class="content">
             <div class="home">

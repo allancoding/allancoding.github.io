@@ -18,7 +18,7 @@ html, body {
 }
 
 .navbar a {
-    float: left;
+    float: right;
     display: block;
     color: #F4030B;
     text-shadow: 0 0 20px #F4030B, 0 0 20px #F4030B;
@@ -37,8 +37,38 @@ html, body {
     display: none;
 }
 
+.navbar .icon:active {
+    color: #F4030B;
+}
+
 .navbar a:active {
     -webkit-tap-highlight-color: transparent;
+}
+
+.navbar .links {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .logo {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navbar .logo img {
+    width: auto;
+    cursor: pointer;
+    margin: 5px 15px;
+    transition: all 0.2s ease;
+    height: 42px;
+}
+
+.navbar .logo:hover img {
+    filter: drop-shadow(0 0 8px #00ff00);
 }
 
 @media screen and (max-width: 600px) {
@@ -46,6 +76,9 @@ html, body {
         height: 0;
         overflow: hidden;
         transition: height 0.5s ease-in-out;
+        float: left;
+        display: block !important;
+        margin-top: 52px;
     }
 
     .navbar a { 
@@ -73,7 +106,7 @@ html, body {
     }
 
     .navbar .responsive a.show {
-        transform: translateX(0);
+        transform: translateX(5px);
     }
 }
 
