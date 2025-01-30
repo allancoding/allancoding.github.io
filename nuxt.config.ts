@@ -5,7 +5,14 @@ export default defineNuxtConfig({
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
-      link: [{ rel: 'icon', type: 'image/png', href: '/logos/allancoding.png' }]
+      link: [{ rel: 'icon', type: 'image/png', href: '/logos/allancoding.png' }],
+      meta: [
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'Allan Coding!' },
+        { property: 'og:description', content: 'Allancoding is a cool coder!' },
+        { property: 'og:url', content: 'https://allancoding.dev/' },
+        { property: 'og:image', content: 'https://allancoding.dev/logos/allancoding.png' }
+      ]
     }
   },
   css: [

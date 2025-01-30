@@ -8,7 +8,7 @@
             </a>
             <div class="links" id="navbarLinks">
                 <a href="#home">Home</a>
-                <a href="#services">Services</a>
+                <a href="websites">Websites</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -29,13 +29,6 @@
 </template>
 <script setup>
     useHead({
-        meta: [
-            { property: 'og:type', content: 'website' },
-            { property: 'og:title', content: 'Allan Coding!' },
-            { property: 'og:description', content: 'Allancoding is a cool coder!' },
-            { property: 'og:url', content: 'https://allancoding.dev/' },
-            { property: 'og:image', content: 'https://allancoding.dev/logos/allancoding.png' }
-        ],
         script: [
             { src: '/js/matrixEffect.js', defer: true },
             { src: '/js/main.js', defer: true }
