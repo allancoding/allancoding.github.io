@@ -20,6 +20,16 @@
                 <p>Welcome to my portfolio!
                             All testing and development is done by me, Allan.
                         </p>
+                        <p>Welcome to my portfolio!
+                            All testing and development is done by me, Allan.
+                        </p>
+                        <p>Welcome to my portfolio!
+                            All testing and development is done by me, Allan.
+                        </p>
+                        <p>Welcome to my portfolio!
+                            All testing and development is done by me, Allan.
+                        </p>
+                        
                 </div>
             </div>
         </div>
