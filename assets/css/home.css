@@ -19,24 +19,21 @@
     width: 80%;
     max-width: 350px;
     padding: 40px 25px;
-    animation: gradient-drop-shadow 5s ease infinite;
+    animation: gradient-drop-shadow 4s ease infinite;
 }
 
 @keyframes gradient-drop-shadow {
-    0% {
-      filter: drop-shadow(0px 0px 10px rgb(6, 50, 120)) drop-shadow(0px 0px 20px rgb(81, 20, 115)) drop-shadow(0px 0px 30px rgb(22, 72, 116));
-    }
-    25% {
-      filter: drop-shadow(0px 0px 10px rgb(81, 20, 115)) drop-shadow(0px 0px 20px rgb(22, 72, 116)) drop-shadow(0px 0px 30px rgb(6, 50, 120));
-    }
-    50% {
-      filter: drop-shadow(0px 0px 10px rgb(22, 72, 116)) drop-shadow(0px 0px 20px rgb(6, 50, 120)) drop-shadow(0px 0px 30px rgb(81, 20, 115));
-    }
-    75% {
-      filter: drop-shadow(0px 0px 10px rgb(81, 20, 115)) drop-shadow(0px 0px 20px rgb(6, 50, 120)) drop-shadow(0px 0px 30px rgb(22, 72, 116));
-    }
-    100% {
-      filter: drop-shadow(0px 0px 10px rgb(6, 50, 120)) drop-shadow(0px 0px 20px rgb(81, 20, 115)) drop-shadow(0px 0px 30px rgb(22, 72, 116));
-    }
+  0%,
+  100% {
+    transform: scale(0.97);
+    filter: drop-shadow(0px 0px 5px rgba(6, 50, 120, 0.65)) 
+            drop-shadow(0px 0px 10px rgba(81, 20, 115, 0.65)) 
+            drop-shadow(0px 0px 15px rgba(22, 72, 116, 0.65));
   }
-  
+  50% {
+    transform: scale(1);
+    filter: drop-shadow(0px 0px 10px rgba(6, 50, 120, 0.65)) 
+            drop-shadow(0px 0px 20px rgba(81, 20, 115, 0.65)) 
+            drop-shadow(0px 0px 30px rgba(22, 72, 116, 0.65));
+  }
+}

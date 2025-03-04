@@ -30,7 +30,7 @@ html, body {
 
 .navbar a:hover, .navbar .icon {
     color: #00ff00;
-    text-shadow: 0 0 10px #00ff00, 0 0 40px #00ff00;
+    text-shadow: 0 0 10px #00ff00, 0 0 30px #00ff00;
 }
 
 .navbar .icon {
@@ -121,12 +121,16 @@ html, body {
 }
   
 .content {
-    position: relative;
+    position: fixed;
     z-index: 1;
+    top: 0;
+    width: 100%;
+    padding-top: 60px;
     text-align: center;
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-
+    transform: scale(1);
+    transition: 0.5s all ease-in-out;
 }
 
 .home {
@@ -155,9 +159,14 @@ h1 {
     -webkit-backdrop-filter: blur(3px);
 }
 
+.transparent {
+    background: rgba(0, 0, 0, 0);
+}
+
 .good-blur {
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .red {

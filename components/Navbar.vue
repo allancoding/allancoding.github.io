@@ -1,5 +1,5 @@
 <template>
-  <div class="navbar blur">
+  <div class="navbar transparent" id="navbar">
     <a
       href="javascript:void(0);"
       class="icon"
