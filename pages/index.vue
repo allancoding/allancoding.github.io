@@ -17,7 +17,7 @@
                         <h2><span id="typing"/></h2>
                     </div>
                 </div>
-                <div>
+                <div class="page">
                 <p>Welcome to my portfolio!
                             All testing and development is done by me, Allan.
                         </p>
@@ -46,12 +46,19 @@
     const typed = useTypedJs()
     onMounted(() => {
     typed('#typing', {
-        strings: ["I'm a software developer", 'I love to code!', 'I know: HTML', 'I know: CSS', 'I know: JavaScript', 'I know: JAVA', 'I know: Python', 'I know: PHP', 'I know C++', 'I know: Vue', 'I know: Nuxt.js', 'I know: Node.js'],
-        typeSpeed: 90,
-        backSpeed: 60,
+        strings: ["I'm a software developer", 'I love to code!', 'I know: &#8203;', 'I know: <span class="red">HTML</span>', 'I know: <span class="red">CSS</span>', 'I know: <span class="red">JavaScript</span>', 'I know: <span class="red">Java</span>', 'I know: <span class="red">Python</span>', 'I know: <span class="red">PHP</span>', 'I know: <span class="red">C++</span>', 'I know: <span class="red">Vue</span>', 'I know: <span class="red">Nuxt.js</span>', 'I know: <span class="red">Node.js</span>'],
+        typeSpeed: 70,
+        backSpeed: 50,
         smartBackspace: true,
-        backDelay: 1000,
+        cursorChar: '<span id="cursor-red">|</span>',
         loop: true,
+        onStringTyped: (arrayPos) => {
+            if (arrayPos > 1 && arrayPos < 12) {
+                document.querySelector('#cursor-red').classList.add('red');
+            } else {
+                document.querySelector('#cursor-red').classList.remove('red');
+            }
+        },
     })
     })
 </script>
