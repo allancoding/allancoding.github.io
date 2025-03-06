@@ -14,11 +14,7 @@
                     </div>
                     <div class="column">
                         <h1>Hello, my name is <span class="red">Allan</span></h1>
-                        <h2>I'm a Software Developer
-                            <!-- <vue-typed-js :strings="['First text', 'Second Text']">
-                            <h1 class="typing"></h1>
-                            </vue-typed-js> -->
-                        </h2>
+                        <h2><span id="typing"/></h2>
                     </div>
                 </div>
                 <div>
@@ -47,8 +43,15 @@
             { src: '/js/main.js', defer: true }
         ]
     })
-    // import Vue from 'vue'
-    // import VueTypedJs from 'vue-typed-js'
-
-    // Vue.use(VueTypedJs)
+    const typed = useTypedJs()
+    onMounted(() => {
+    typed('#typing', {
+        strings: ["I'm a software developer", 'I love to code!', 'I know: HTML', 'I know: CSS', 'I know: JavaScript', 'I know: JAVA', 'I know: Python', 'I know: PHP', 'I know C++', 'I know: Vue', 'I know: Nuxt.js', 'I know: Node.js'],
+        typeSpeed: 90,
+        backSpeed: 60,
+        smartBackspace: true,
+        backDelay: 1000,
+        loop: true,
+    })
+    })
 </script>
