@@ -1,4 +1,4 @@
-<style>
+<style scoped>
 @import url("assets/css/home.css");
 </style>
 <template>
@@ -14,37 +14,31 @@
                     </div>
                     <div class="column">
                         <h1>Hello, my name is <span class="red">Allan</span></h1>
-                        <h2><span id="typing"/></h2>
+                        <h2><span id="typing" /></h2>
                     </div>
                 </div>
                 <div class="page">
-                <p>Welcome to my portfolio!
-                            All testing and development is done by me, Allan.
+                    <Content>
+                        <h2>About Me</h2>
+                        <p>
+                            I'm a software developer who loves to code! I have experience in web development, mobile development, and desktop development. I'm always learning new technologies and improving my skills. I'm passionate about creating software that makes a difference in people's lives.
                         </p>
-                        <p>Welcome to my portfolio!
-                            All testing and development is done by me, Allan.
-                        </p>
-                        <p>Welcome to my portfolio!
-                            All testing and development is done by me, Allan.
-                        </p>
-                        <p>Welcome to my portfolio!
-                            All testing and development is done by me, Allan.
-                        </p>
-                        
+                    </Content>
                 </div>
+                <Footer />
             </div>
         </div>
     </div>
 </template>
 <script setup>
-    useHead({
-        script: [
-            { src: '/js/matrixEffect.js', defer: true },
-            { src: '/js/main.js', defer: true }
-        ]
-    })
-    const typed = useTypedJs()
-    onMounted(() => {
+useHead({
+    script: [
+        { src: '/js/matrixEffect.js', defer: true },
+        { src: '/js/main.js', defer: true }
+    ]
+})
+const typed = useTypedJs()
+onMounted(() => {
     typed('#typing', {
         strings: ["I'm a software developer", 'I love to code!', 'I know: &#8203;', 'I know: <span class="red">HTML</span>', 'I know: <span class="red">CSS</span>', 'I know: <span class="red">JavaScript</span>', 'I know: <span class="red">Java</span>', 'I know: <span class="red">Python</span>', 'I know: <span class="red">PHP</span>', 'I know: <span class="red">C++</span>', 'I know: <span class="red">Vue</span>', 'I know: <span class="red">Nuxt.js</span>', 'I know: <span class="red">Node.js</span>'],
         typeSpeed: 70,
@@ -60,5 +54,5 @@
             }
         },
     })
-    })
+})
 </script>

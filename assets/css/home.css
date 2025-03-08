@@ -1,6 +1,15 @@
 .columns {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
 }
 
 .column {
@@ -39,5 +48,9 @@
 }
 
 .home .page {
-    padding-top: 20px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

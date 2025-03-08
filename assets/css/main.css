@@ -136,9 +136,13 @@ html, body {
 .home {
     animation: fadeIn 1s forwards;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 120px);
     padding-top: 60px;
     position: relative;
+    overflow-x: auto;
+    mask-image:
+        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 60px), rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to left, black 10px, transparent 11px);
 }
 
 @keyframes fadeIn {
@@ -174,4 +178,10 @@ h1 {
 .red {
     color: #F4030B;
     text-shadow: 0 0 10px #F4030B, 0 0 20px #F4030B;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(79, 254, 0, 0.2);
+    border-radius: 10px;
+    -webkit-mask-image: none;
 }
