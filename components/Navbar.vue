@@ -6,15 +6,16 @@
       id="navbarIcon"
       onclick="toggleNavbar()"
     >
-      &#9776;
+      <Icon name="charm:menu-hamburger" />
     </a>
     <div class="links" id="navbarLinks">
-      <a href="#home">Home</a>
-      <a href="websites">Websites</a>
+      <a href="/">Home</a>
       <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="portfolio">Portfolio</a>
+      <a href="websites">Websites</a>
+      <a href="contact">Contact</a>
     </div>
-    <a href="#home" class="logo">
+    <a href="/" class="logo">
       <img src="/logos/allancoding.png" id="main-logo" alt="Logo" />
       Allan Coding!
     </a>

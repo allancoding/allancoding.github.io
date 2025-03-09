@@ -50,7 +50,40 @@
 .home .page {
     padding-top: 60px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.social {
+    padding-top: 30px;
+}
+
+.social span {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #F4030B;
+}
+
+.social span:hover {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .social {
+        padding-top: 30px;
+    }
+
+    .social span:hover {
+        color: #F4030B;
+    }
+
+    .social span:active {
+        color: #00ff00;
+    }
+}
+
+.typing {
+    padding-bottom: 15px;
 }

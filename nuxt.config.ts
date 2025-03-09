@@ -10,7 +10,7 @@ export default defineNuxtConfig({
       meta: [
         { property: 'og:type', content: 'website' },
         { property: 'og:title', content: 'Allan Coding!' },
-        { property: 'og:description', content: 'Allancoding is a cool coder!' },
+        { property: 'og:description', content: 'Allancoding the cool coder!' },
         { property: 'og:url', content: 'https://allancoding.dev/' },
         { property: 'og:image', content: 'https://allancoding.dev/logos/allancoding.png' }
       ]
@@ -21,5 +21,5 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
   
-  modules: ["nuxt-typedjs"]
+  modules: ["nuxt-typedjs", "@nuxt/icon"]
 })

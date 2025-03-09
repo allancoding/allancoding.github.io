@@ -7,6 +7,7 @@ html, body {
     background-color: #000;
     width: 100%;
     height: 100%;
+    text-wrap: pretty;
 }
 
 .navbar {
@@ -35,6 +36,12 @@ html, body {
 
 .navbar .icon {
     display: none;
+}
+
+.navbar .icon span {
+    margin-top: 6px;
+    width: 1.25em !important;
+    height: 1.25em !important;
 }
 
 .navbar .icon:active {
@@ -71,45 +78,6 @@ html, body {
     filter: drop-shadow(0 0 8px #00ff00);
 }
 
-@media screen and (max-width: 600px) {
-    .links {
-        height: 0;
-        overflow: hidden;
-        transition: height 0.5s ease-in-out;
-        float: left;
-        display: block !important;
-        margin-top: 52px;
-    }
-
-    .navbar a { 
-        float: none; 
-        position: sticky;
-        text-align: left; 
-        display: none;
-    }
-    
-    .navbar .icon {
-        display: block;
-        position: relative;
-        right: 0;
-        float: right;
-        padding: 14px 20px;
-        cursor: pointer;
-        top: 0;
-    }
-    
-    .navbar .responsive a {
-        display: block;
-        transform: translateX(-100%);
-        transition: transform 0.5s ease-in-out;
-        padding: 14px 20px;
-    }
-
-    .navbar .responsive a.show {
-        transform: translateX(5px);
-    }
-}
-
 #cnv {
     position: fixed;
     top: 0;
@@ -136,13 +104,57 @@ html, body {
 .home {
     animation: fadeIn 1s forwards;
     width: 100%;
-    height: calc(100vh - 120px);
-    padding-top: 60px;
+    height: calc(100svh - 110px);
+    padding-top: 50px;
     position: relative;
     overflow-x: auto;
     mask-image:
         linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 60px), rgba(0, 0, 0, 0) 100%),
         linear-gradient(to left, black 10px, transparent 11px);
+}
+
+@media screen and (max-width: 600px) {
+    .links {
+        height: 0;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+        float: left;
+        display: block !important;
+        margin-top: 52px;
+    }
+
+    .navbar a { 
+        float: none; 
+        position: sticky;
+        text-align: left; 
+        display: none;
+    }
+    
+    .navbar .icon {
+        display: block;
+        position: relative;
+        right: 0;
+        float: right;
+        padding: 10px 20px;
+        cursor: pointer;
+        top: 0;
+    }
+    
+    .navbar .responsive a {
+        display: block;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in-out;
+        padding: 14px 20px;
+    }
+
+    .navbar .responsive a.show {
+        transform: translateX(5px);
+    }
+
+    .home {
+        padding-top: 20px;
+        height: calc(100svh - 80px);
+    }
 }
 
 @keyframes fadeIn {
@@ -184,4 +196,44 @@ h1 {
     background: rgba(79, 254, 0, 0.2);
     border-radius: 10px;
     -webkit-mask-image: none;
+}
+
+.button {
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid #F4030B;
+    color: #F4030B;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: #000;
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+a {
+    color: #F4030B;
+    text-shadow: 0 0 10px #F4030B, 0 0 20px #F4030B;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #00ff00;
+    text-shadow: none;
+}
+
+.readme img {
+    max-width: 100%;
+}
+
+.readme .badges img {
+    margin-left: 5px;
 }

@@ -185,7 +185,6 @@ var handleTL = new TimelineMax();
 var tl = new TimelineMax();
 
 tl.add(function(){
-  $(".container").css("visibility", "visible");
   animateCopy();
   blinkHandle();
 }, 0.2)
@@ -202,14 +201,8 @@ function blinkHandle() {
 }
 
 function animateHandle() {
-  const copyElement = document.querySelector('.copy');
-  const $copyWidth = copyElement ? copyElement.offsetWidth : 0;
-  handleTL.to('.handle', 0.7, {
-    x: $copyWidth,
-    ease: SteppedEase.config(12)
-  }, 0.05);
+  handleTL.to('.handle', 0.7, {x:$copyWidth, ease:SteppedEase.config(12)}, 0.05);
 }
-
 $(window).click(function(e) {
     splitTextTimeline.restart()
   handleTL.restart()

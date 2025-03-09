@@ -5,7 +5,7 @@
     <title>Allan Coding!</title>
     <div>
         <canvas id="cnv"></canvas>
-        <Navbar/>
+        <Navbar />
         <div class="content blur" id="content">
             <div class="home">
                 <div class="columns">
@@ -14,18 +14,131 @@
                     </div>
                     <div class="column">
                         <h1>Hello, my name is <span class="red">Allan</span></h1>
-                        <h2><span id="typing" /></h2>
+                        <h2 class="typing"><span id="typing">&#8203;</span></h2>
+                        <button class="button">Contact Me</button>
+                        <div class="social">
+                            <a href="https://github.com/allancoding">
+                                <Icon name="line-md:github" />
+                            </a>
+                            <a href="mailto:allancoding.dev@gmail.com">
+                                <Icon name="line-md:email" />
+                            </a>
+                            <a href="https://discord.gg/users/893621402496806975">
+                                <Icon name="line-md:discord" />
+                            </a>
+                            <a href="https://www.linkedin.com/in/allancoding/">
+                                <Icon name="line-md:linkedin" />
+                            </a>
+                            <a href="https://twitter.com/allancoding">
+                                <Icon name="line-md:twitter-x" />
+                            </a>
+                            <a href="https://www.youtube.com/@allancoding">
+                                <Icon name="line-md:youtube" />
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="page">
-                    <Content>
-                        <h2>About Me</h2>
-                        <p>
-                            I'm a software developer who loves to code! I have experience in web development, mobile development, and desktop development. I'm always learning new technologies and improving my skills. I'm passionate about creating software that makes a difference in people's lives.
+                    <Content :title="'About'">
+                        <p>I'm a software developer with a passion for coding! I have experience in web, mobile, and
+                            desktop development, and I'm always exploring new technologies to enhance my skills. I enjoy
+                            building software that makes a meaningful impact. Over the years, I’ve worked in various
+                            areas of computer science, continuously improving my expertise.</p>
+                    </Content>
+                    <Content :title="'Skills and Experience'" :button="'Portfolio'">
+                        <p>I have experience with the following technologies:
+                            <span class="red">HTML</span>, <span class="red">CSS</span>, <span
+                                class="red">JavaScript</span>, <span class="red">Java</span>, <span
+                                class="red">Python</span>, <span class="red">PHP</span>, <span class="red">C++</span>,
+                            <span class="red">Vue</span>, <span class="red">Nuxt.js</span>, and <span
+                                class="red">Node.js</span>.
+
+                            I thrive on challenges and always seek opportunities to learn and grow. To expand my skill
+                            set, I’ve worked on many personal projects, exploring different technologies and approaches.
+                            I love problem-solving and finding creative solutions to complex challenges.
+
+                            I'm always on the lookout for exciting new projects. You can check out some of my work on my
+                            portfolio.<br />
                         </p>
                     </Content>
+                    <Content :title="'README.md'">
+                        <div class="readme">
+                            <h3>Hi there 👋</h3>
+                            <p><img src="/v1/typing.svg"></img></p>
+                            <p class="badges"><img
+                                    src="https://komarev.com/ghpvc/?username=allancoding&color=brightgreen">
+                                <img
+                                    src="https://img.shields.io/badge/Discord-allancoding-brightgreen/?logo=discord&color=7289DA">
+                                <img
+                                    src="https://img.shields.io/badge/Editor-VS%20Code-brightgreen/?logo=visualstudiocode&logoColor=blue&color=blue">
+                                <img
+                                    src="https://img.shields.io/badge/Knows-JavaScript-brightgreen/?logo=javascript&logoColor=warning&color=yellow">
+                                <img
+                                    src="https://img.shields.io/badge/Knows-HTML-brightgreen/?logo=html5&logoColor=warning&color=orange">
+                                <img
+                                    src="https://img.shields.io/badge/Knows-JAVA-brightgreen/?logo=java&logoColor=red&color=red">
+                                <img
+                                    src="https://img.shields.io/badge/Knows-MarkDown-brightgreen?logo=markdown&color=fff">
+                                <img
+                                    src="https://img.shields.io/github/sponsors/allancoding?label=Sponsors&logo=githubsponsors&style=flat">
+                            </p>
+                            <img
+                                src="https://raw.githubusercontent.com/allancoding/allancoding/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only">
+                            <p> </p>
+                            <p>📫 How to reach me:</p>
+                            <ul>
+                                <li>Email: <a href="mailto:allancoding.dev@gmail.com">allancoding.dev@gmail.com</a></li>
+                                <li>Website: <a href="https://allancoding.dev">allancoding.dev</a></li>
+                            </ul>
+                            <p>🌱 I’m currently learning:</p>
+                            <ul>
+                                <li>Rust</li>
+                                <li>JAVASCRIPT</li>
+                                <li>CSS</li>
+                                <li>HTML</li>
+                                <li>PHP</li>
+                                <li>Bash</li>
+                                <li>JAVA</li>
+                                <li>Python</li>
+                            </ul>
+                            <h4>I Am A Full Stack Developer!</h4>
+                            <p>🔭 I’m currently working on:</p>
+                            <ul>
+                                <li><a href="https://github.com/EmulatorJS/EmulatorJS">EmulatorJS</a></li>
+                                <li><a href="https://github.com/PrismNet">PrismOS</a></li>
+                            </ul>
+                            <p>⚡ Fun fact:</p>
+                            <ul>
+                                <li>I learned to code at 10.</li>
+                                <li>This is my first
+                                    <a
+                                        href="https://web.archive.org/web/20231225133919/http://live.codechangers.com/aniles/">website</a>
+                                </li>
+                            </ul>
+                            <p><img src="https://discord-readme-badge.vercel.app/api?id=893621402496806975"></p>
+                            <p>
+                                <img
+                                    src="https://github-readme-stats-allancoding.vercel.app/api?username=allancoding&count_private=true&border_radius=8&theme=tokyonight&include_all_commits=true">
+                            </p>
+                            <p>
+                                <img
+                                    src="https://github-readme-stats-allancoding.vercel.app/api/top-langs/?username=allancoding&langs_count=20&layout=compact&theme=tokyonight">
+                            </p>
+                            <p>
+                                <img src="https://streak-stats.demolab.com/?user=allancoding&theme=tokyonight&type=svg">
+                            </p>
+                            <p>
+                                <img :src="trophySrc">
+                            </p>
+                            <p><img src="https://readme-jokes.vercel.app/api?theme=tokyonight"></p>
+                            <a style="float:left" href="https://stackexchange.com/users/18796553"><img
+                                    src="https://stackexchange.com/users/flair/18796553.png?theme=dark" width="208"
+                                    alt="profile for Allancoding on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+                                    title="profile for Allancoding on Stack Exchange, a network of free, community-driven Q&amp;A sites"></a>
+                        </div>
+                    </Content>
                 </div>
-                <Footer />
+                <Footer></Footer>
             </div>
         </div>
     </div>
@@ -38,7 +151,19 @@ useHead({
     ]
 })
 const typed = useTypedJs()
+const trophySrc = ref('');
+const route = useRoute();
+const router = useRouter();
+
+const updateImageUrl = () => {
+    const columns = Math.min(11, Math.floor(window.innerWidth / 130));
+    trophySrc.value = `https://github-profile-trophy.vercel.app/?username=allancoding&theme=tokyonight&no-frame=true&margin-w=15&margin-h=15&row=11&column=${columns}`;
+};
+
 onMounted(() => {
+    if (route.fullPath.includes('?portfolio')) {
+        router.replace('/portfolio');
+    }
     typed('#typing', {
         strings: ["I'm a software developer", 'I love to code!', 'I know: &#8203;', 'I know: <span class="red">HTML</span>', 'I know: <span class="red">CSS</span>', 'I know: <span class="red">JavaScript</span>', 'I know: <span class="red">Java</span>', 'I know: <span class="red">Python</span>', 'I know: <span class="red">PHP</span>', 'I know: <span class="red">C++</span>', 'I know: <span class="red">Vue</span>', 'I know: <span class="red">Nuxt.js</span>', 'I know: <span class="red">Node.js</span>'],
         typeSpeed: 70,
@@ -54,5 +179,11 @@ onMounted(() => {
             }
         },
     })
-})
+    updateImageUrl();
+    window.addEventListener('resize', updateImageUrl);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateImageUrl);
+});
 </script>
