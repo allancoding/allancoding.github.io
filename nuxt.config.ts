@@ -4,6 +4,9 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       link: [{ rel: 'icon', type: 'image/png', href: '/logos/allancoding.png' }],
@@ -14,12 +17,17 @@ export default defineNuxtConfig({
         { property: 'og:url', content: 'https://allancoding.dev/' },
         { property: 'og:image', content: 'https://allancoding.dev/logos/allancoding.png' }
       ]
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' }
   },
 
   css: [
     '~/assets/css/main.css'
   ],
   
-  modules: ["nuxt-typedjs", "@nuxt/icon"]
+  modules: ["nuxt-typedjs", "@nuxt/icon"],
+  plugins: [
+    '~/plugins/matrixEffect.client.js',
+    '~/plugins/title.js'
+  ],
 })

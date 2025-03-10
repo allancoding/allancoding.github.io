@@ -1,103 +1,81 @@
-
 <script setup lang="ts">
   import type { NuxtError } from '#app'
-  import { onMounted } from 'vue'
   
   const props = defineProps({
     error: Object as () => NuxtError
   })
 
-  onMounted(() => {
-    const script = document.createElement('script')
-    script.src = '/js/404.js'
-    script.defer = true
-    document.body.appendChild(script)
-  })
+  const { $setTitle } = useNuxtApp() as unknown as { $setTitle: (title: string) => void };
+  $setTitle(props.error?.statusCode?.toString() || 'Error');
 </script>
-
 <template>
-    <title>{{ error?.statusCode }} {{ error?.statusMessage }}</title>
-    <div id="error" class="container">
-      <div class="copy-container center-xy">
+  <canvas id="cnv"></canvas>
+  <Navbar />
+  <div class="content">
+    <div class="home">
+      <div class="main">
         <p class="green">{{ error?.statusCode }}, {{ error?.statusMessage }} :(&nbsp;</p>
-        <span class="handle"></span>
+        <UIButton :link="'/'">Go Home</UIButton>
       </div>
+      <Footer/>
     </div>
+  </div>
 </template>
-  
-<style scoped>
-  .center-xy {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-  }
-  
-  .green {
-    color: #30F708;
-  }
-  
-  html, body {
-    font-size: 16px;
-  }
-  
-  html {
-    box-sizing: border-box;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
-  
-  body {
-    background-color: #000;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  .container {
-    width: 100%;
-  }
 
-  #error {
-    visibility: hidden;
-  }
-  
-  .copy-container {
-    text-align: center;
-  }
-  
-  p {
-    color: #101010;
-    font-size: 24px;
-    letter-spacing: 0.2px;
-    margin: 0;
-  }
-  
-  .handle {
-    background: #FF0000B6;
-    width: 14px;
-    height: 30px;
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+
+#cnv {
+    position: fixed;
     top: 0;
     left: 0;
-    margin-top: 1px;
-    position: absolute;
-  }
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
   
-  #cb-replay {
-    fill: #666;
-    width: 20px;
-    margin: 15px;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    overflow: inherit;
-    cursor: pointer;
-  }
-  #cb-replay:hover {
-    fill: #888;
-  }
+.content {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    padding-top: 60px;
+    text-align: center;
+    color: #00ff00;
+    text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00;
+    transform: scale(1);
+    transition: 0.5s all ease-in-out;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.home {
+    animation: fadeIn 1s forwards;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100svh - 110px);
+    min-height: calc(100svh - 110px);
+    padding-top: 50px;
+    position: relative;
+    overflow-x: auto;
+    mask-image:
+        linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 60px), rgba(0, 0, 0, 0) 100%),
+        linear-gradient(to left, black 10px, transparent 11px);
+}
+
+.main {
+  flex: 1;
+}
 </style>
-  

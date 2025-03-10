@@ -47,14 +47,6 @@
   }
 }
 
-.home .page {
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 .social {
     padding-top: 30px;
 }
@@ -63,6 +55,7 @@
     font-size: 1.5em;
     margin: 0 10px;
     color: #F4030B;
+    transition: all 0.2s ease;
 }
 
 .social span:hover {

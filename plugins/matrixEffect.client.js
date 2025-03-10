@@ -1,4 +1,3 @@
-
 const minDelay = 0.15;
 const maxDelay = 0.3;
 const minSize = 10;
@@ -9,8 +8,8 @@ const columns = Math.floor(window.innerWidth / 28);
 const stripCount = Math.floor(window.innerWidth / 38);
 
 /** @type {HTMLCanvasElement} */
-const cnv = document.getElementById("cnv");
-const ctx = cnv.getContext("2d");
+let cnv;
+let ctx;
 const strips = [];
 const usedColumns = [];
 var screenWidth = 100, screenHeight = 100;
@@ -19,6 +18,25 @@ var time = undefined;
 let fadeOpacity = 1;
 let isPageVisible = true;
 const fadeDuration = 1;
+
+export default defineNuxtPlugin((nuxtApp) => {
+    const runScript = () => {
+        cnv = document.getElementById("cnv");
+        ctx = cnv.getContext('2d');
+        document.addEventListener('visibilitychange', function () {
+            isPageVisible = !document.hidden;
+            if (isPageVisible) {
+                time = new Date().getTime() / 1000;
+            }
+        });
+        
+        window.addEventListener("resize", updateCanvas);
+        updateCanvas();
+        setInterval(redraw, 50);
+    };
+    nuxtApp.hook('app:error', runScript);
+    nuxtApp.hook('page:finish', runScript);
+});
 
 const characters = [];
 function addCharacters(start, end) {
@@ -159,14 +177,3 @@ function updateCanvas() {
     cnv.height = screenHeight;
     init();
 }
-
-document.addEventListener('visibilitychange', function () {
-    isPageVisible = !document.hidden;
-    if (isPageVisible) {
-        time = new Date().getTime() / 1000;
-    }
-});
-
-window.addEventListener("resize", updateCanvas);
-updateCanvas();
-myInterval = setInterval(redraw, 50);

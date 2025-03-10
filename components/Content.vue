@@ -5,7 +5,7 @@
     <div class="module">
         <h2 v-if="title">{{ title }}</h2>
         <slot></slot>
-        <button class="button" v-if="button"> {{ button }}</button>
+        <UIButton v-if="button" :link="buttonLink">{{ button }}</UIButton>
     </div>
 </template>
 
@@ -17,6 +17,10 @@ export default {
             required: false
         },
         button: {
+            type: String,
+            required: false
+        },
+        buttonLink: {
             type: String,
             required: false
         }
