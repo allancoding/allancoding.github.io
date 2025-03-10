@@ -49,10 +49,19 @@ h1 {
     text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00 !important;
 }
 
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+    }
+}
+
+* {
+    scrollbar-color: rgba(79, 254, 0, 0.2) transparent;
+}
+
 ::-webkit-scrollbar-thumb {
     background: rgba(79, 254, 0, 0.2);
     border-radius: 10px;
-    -webkit-mask-image: none;
 }
 
 .button {

@@ -71,7 +71,7 @@ useHead(() => ({
     overflow-x: auto;
     mask-image:
         linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 60px), rgba(0, 0, 0, 0) 100%),
-        linear-gradient(to left, black 10px, transparent 11px);
+        linear-gradient(to left, black 15px, transparent 15px);
 }
 
 .main {

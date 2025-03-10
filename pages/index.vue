@@ -121,13 +121,13 @@
                             src="https://github-readme-stats-allancoding.vercel.app/api/top-langs/?username=allancoding&langs_count=20&layout=compact&theme=tokyonight">
                     </p>
                     <p>
-                        <img src="https://streak-stats.demolab.com/?user=allancoding&theme=tokyonight&type=svg">
+                        <img src="https://allancoding-github-readme-streak-stats.vercel.app/?user=allancoding&theme=tokyonight">
                     </p>
                     <p>
                         <img :src="trophySrc">
                     </p>
-                    <p style="margin-bottom: 5px;"><img src="https://readme-jokes.vercel.app/api?theme=tokyonight"></p>
-                    <p style="float:left; margin-top: -15px;">
+                    <p style="margin-bottom: 0;"><img src="https://readme-jokes.vercel.app/api?theme=tokyonight"></p>
+                    <p style="float:left; margin-top: 0;">
                         <a href="https://stackexchange.com/users/18796553">
                             <img src="https://stackexchange.com/users/flair/18796553.png?theme=dark" width="208" alt="profile for Allancoding on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Allancoding on Stack Exchange, a network of free, community-driven Q&amp;A sites">
                         </a>
