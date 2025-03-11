@@ -9,10 +9,12 @@
       <Icon name="charm:menu-hamburger" />
     </a>
     <div class="links" id="navbarLinks">
-      <router-link to="/" exact-active-class="green">Home</router-link>
-      <router-link to="/portfolio" exact-active-class="green">Portfolio</router-link>
-      <router-link to="/websites" exact-active-class="green">Websites</router-link>
-      <router-link to="/contact" exact-active-class="green">Contact</router-link>
+        <div class="esc" id="navEsc">
+            <router-link to="/" exact-active-class="green">Home</router-link>
+            <router-link to="/portfolio" exact-active-class="green">Portfolio</router-link>
+            <router-link to="/websites" exact-active-class="green">Websites</router-link>
+            <router-link to="/contact" exact-active-class="green">Contact</router-link>
+        </div>
     </div>
     <a href="/" class="logo">
       <img src="/logos/allancoding.png" id="main-logo" alt="Logo" />
@@ -31,7 +33,7 @@
 }
 
 .navbar a {
-    float: right;
+    float: left;
     display: block;
     color: #F4030B;
     text-shadow: 0 0 20px #F4030B, 0 0 20px #F4030B;
@@ -92,19 +94,16 @@
 
 @media screen and (max-width: 600px) {
     .links {
-        height: 0;
-        overflow: hidden;
-        transition: height 0.5s ease-in-out;
         float: left;
         display: block !important;
         margin-top: 52px;
+        position: relative;
     }
 
     .navbar a { 
         float: none; 
         position: sticky;
-        text-align: left; 
-        display: none;
+        text-align: left;
     }
     
     .navbar .icon {
@@ -116,8 +115,12 @@
         cursor: pointer;
         top: 0;
     }
-    
-    .navbar .responsive a {
+
+    .navbar .esc {
+        position: absolute;
+    }
+
+    .navbar .esc a {
         display: block;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;

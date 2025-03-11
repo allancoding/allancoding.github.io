@@ -1,7 +1,7 @@
 <template>
   <canvas id="cnv"></canvas>
   <Navbar />
-  <div class="content">
+  <div class="content" id="content">
     <div class="home">
       <div class="main">
         <NuxtPage/>
@@ -53,7 +53,7 @@ useHead(() => ({
     color: #00ff00;
     text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00;
     transform: scale(1);
-    transition: 0.5s all ease-in-out;
+    transition: all 0.5s ease-in-out, padding 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);

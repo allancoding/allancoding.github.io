@@ -1,53 +1,44 @@
-function toggleNavbar() {
+function toggleNavbar(close) {
     var links = document.getElementById("navbarLinks");
     var icon = document.getElementById("navbarIcon");
     var linkElements = links.getElementsByTagName('a');
     var isShowing = links.classList.contains("responsive");
     var content = document.getElementById("content");
+    var esc = document.getElementById("navEsc");
 
     for (let i = 0; i < linkElements.length; i++) {
-        (function(i) {
-            setTimeout(function() {
-                if (isShowing) {
-                    linkElements[i].classList.remove("show");
-                } else {
-                    linkElements[i].classList.add("show");
-                }
-            }, i === 0 ? 0 : 100 * i);
-        })(i);
-    }
-
-    if (isShowing) {
-        links.style.height = links.scrollHeight + "px";
-        requestAnimationFrame(() => {
-            links.style.height = "0";
-        });
-
-        links.addEventListener(
-            "transitionend",
-            function onCollapse() {
-                links.classList.remove("responsive");
-                icon.classList.remove("responsive");
-                links.style.height = "";
-                links.removeEventListener("transitionend", onCollapse);
+        setTimeout(function() {
+            if (isShowing) {
+                linkElements[linkElements.length - 1 - i].classList.remove("show");
+            } else {
+                linkElements[i].classList.add("show");
             }
-        );
-        content.style.paddingTop = icon.scrollHeight + "px";
+        }, i === 0 ? 0 : 100 * i);
+    }
+    
+    if (isShowing || close) {
+        content.addEventListener("transitionend", function onCollapse() {
+            links.classList.remove("responsive");
+            icon.classList.remove("responsive");
+            content.removeEventListener("transitionend", onCollapse);
+        });
+        content.style.paddingTop = "";
     } else {
         icon.classList.add("responsive");
         links.classList.add("responsive");
-        links.style.height = "0";
-        requestAnimationFrame(() => {
-            links.style.height = links.scrollHeight + "px";
-        });
+        links.style.height = esc.scrollHeight + "px";
 
-        links.addEventListener(
-            "transitionend",
-            function onExpand() {
-                links.style.height = "auto";
-                links.removeEventListener("transitionend", onExpand);
-            }
-        );
-        content.style.paddingTop = icon.scrollHeight + links.scrollHeight + "px";
+        content.addEventListener("transitionend", function onExpand() {
+            content.removeEventListener("transitionend", onExpand);
+        });
+        content.style.paddingTop = links.scrollHeight + "px";
     }
 }
+
+function handleResize() {
+    if (window.innerWidth > 600) {
+        toggleNavbar(true);
+    }
+}
+
+window.addEventListener("resize", handleResize);
