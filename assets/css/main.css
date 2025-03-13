@@ -18,13 +18,6 @@ html, body {
     justify-content: center;
 }
 
-@media screen and (max-width: 600px) {
-    .home {
-        padding-top: 20px;
-        height: calc(100svh - 80px);
-    }
-}
-
 @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -41,12 +34,20 @@ h1 {
 
 .green:hover, .red {
     color: #F4030B !important;
-    text-shadow: 0 0 2px #F4030B, 0 0 10px #F4030B !important;
+    text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
 }
 
 .green {
     color: #00ff00 !important;
-    text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00 !important;
+    text-shadow: 0 0 1px #00ff00, 0 0 3px #00ff00 !important;
+}
+
+.green-border {
+    border: 2px solid #00ff00 !important;
+}
+
+.green-border:hover {
+    border: 2px solid #F4030B !important;
 }
 
 @-moz-document url-prefix() {

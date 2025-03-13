@@ -1,4 +1,8 @@
-.green {
-    color: #00ff00 !important;
-    text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00 !important;
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
 }

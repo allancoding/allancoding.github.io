@@ -1,10 +1,11 @@
 function toggleNavbar(close) {
     var links = document.getElementById("navbarLinks");
     var icon = document.getElementById("navbarIcon");
-    var linkElements = links.getElementsByTagName('a');
+    var linkElements = links.getElementsByTagName('span');
     var isShowing = links.classList.contains("responsive");
     var content = document.getElementById("content");
     var esc = document.getElementById("navEsc");
+    var home = document.getElementById("home");
 
     for (let i = 0; i < linkElements.length; i++) {
         setTimeout(function() {
@@ -17,6 +18,8 @@ function toggleNavbar(close) {
     }
     
     if (isShowing || close) {
+        home.style.height = "calc(100svh - 110px)";
+        home.style.minHeight = "calc(100svh - 110px)";
         content.addEventListener("transitionend", function onCollapse() {
             links.classList.remove("responsive");
             icon.classList.remove("responsive");
@@ -26,6 +29,8 @@ function toggleNavbar(close) {
     } else {
         icon.classList.add("responsive");
         links.classList.add("responsive");
+        home.style.height = "calc(100svh - 110px - " + links.scrollHeight + "px)";
+        home.style.minHeight = "calc(100svh - 50px - " + links.scrollHeight + "px)";
         links.style.height = esc.scrollHeight + "px";
 
         content.addEventListener("transitionend", function onExpand() {

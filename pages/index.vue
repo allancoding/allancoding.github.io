@@ -151,12 +151,6 @@ const updateImageUrl = () => {
     trophySrc.value = `https://github-profile-trophy.vercel.app/?username=allancoding&theme=tokyonight&no-frame=true&margin-w=15&margin-h=15&row=11&column=${columns}`;
 };
 
-useHead({
-    script: [
-        { src: '/js/main.js', defer: true }
-    ]
-});
-
 onMounted(() => {
     if (route.fullPath.includes('?portfolio')) {
         router.replace('/portfolio');

@@ -9,11 +9,11 @@
       <Icon name="charm:menu-hamburger" />
     </a>
     <div class="links" id="navbarLinks">
-        <div class="esc" id="navEsc">
-            <router-link to="/" exact-active-class="green">Home</router-link>
-            <router-link to="/portfolio" exact-active-class="green">Portfolio</router-link>
-            <router-link to="/websites" exact-active-class="green">Websites</router-link>
-            <router-link to="/contact" exact-active-class="green">Contact</router-link>
+        <div class="esc" id="navEsc" @click="checkShow">
+            <span><router-link to="/" exact-active-class="green">Home</router-link></span>
+            <span><router-link to="/portfolio" exact-active-class="green">Portfolio</router-link></span>
+            <span><router-link to="/websites" exact-active-class="green">Websites</router-link></span>
+            <span><router-link to="/contact" exact-active-class="green">Contact</router-link></span>
         </div>
     </div>
     <a href="/" class="logo">
@@ -22,6 +22,30 @@
     </a>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    checkShow: function () {
+        let navbarLinks = document.getElementById('navbarLinks');
+        var linkElements = navbarLinks.getElementsByTagName('a');
+        if (navbarLinks.classList.contains('responsive')) {
+            for (let i = 0; i < linkElements.length; i++) {
+                linkElements[i].classList.add("show");
+                console.log(linkElements[i]);
+            }
+        }
+    }
+  },
+  setup() {
+    useHead({
+        script: [
+            { src: '/js/navbar.js', defer: true }
+        ]
+    });
+  }
+}
+</script>
 
 <style scoped>
 .navbar {
@@ -120,14 +144,17 @@
         position: absolute;
     }
 
-    .navbar .esc a {
+    .navbar .esc span{
         display: block;
         transform: translateX(-100%);
         transition: transform 0.5s ease-in-out;
+    }
+
+    .navbar .esc span a {
         padding: 14px 20px;
     }
 
-    .navbar .responsive a.show {
+    .navbar .responsive span.show {
         transform: translateX(5px);
     }
 }

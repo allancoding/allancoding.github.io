@@ -1,6 +1,7 @@
 <style scoped>
     @import url("assets/css/content.css");
 </style>
+
 <template>
     <div class="module">
         <h2 v-if="title">{{ title }}</h2>

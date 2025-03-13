@@ -2,7 +2,7 @@
   <canvas id="cnv"></canvas>
   <Navbar />
   <div class="content" id="content">
-    <div class="home">
+    <div class="home" id="home">
       <div class="main">
         <NuxtPage/>
       </div>
@@ -18,7 +18,6 @@ useHead(() => ({
   title: title.value ? `${title.value} | Allan Coding!` : 'Allan Coding!',
   meta: [{ property: 'og:title', content: title.value ? `${title.value} | Allan Coding!` : 'Allan Coding!' }]
 }));
-
 </script>
 
 <style>
@@ -53,7 +52,7 @@ useHead(() => ({
     color: #00ff00;
     text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00;
     transform: scale(1);
-    transition: all 0.5s ease-in-out, padding 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
     background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
@@ -72,6 +71,7 @@ useHead(() => ({
     mask-image:
         linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) calc(100% - 60px), rgba(0, 0, 0, 0) 100%),
         linear-gradient(to left, black 15px, transparent 15px);
+    transition: all 0.5s ease-in-out;
 }
 
 .main {
