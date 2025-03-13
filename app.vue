@@ -63,9 +63,8 @@ useHead(() => ({
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: calc(100svh - 110px);
-    min-height: calc(100svh - 110px);
-    padding-top: 50px;
+    height: calc(100svh - 60px);
+    min-height: calc(100svh - 60px);
     position: relative;
     overflow-x: auto;
     mask-image:

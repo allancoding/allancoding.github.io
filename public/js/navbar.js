@@ -30,7 +30,7 @@ function toggleNavbar(close) {
         icon.classList.add("responsive");
         links.classList.add("responsive");
         home.style.height = "calc(100svh - 110px - " + links.scrollHeight + "px)";
-        home.style.minHeight = "calc(100svh - 50px - " + links.scrollHeight + "px)";
+        home.style.minHeight = "calc(100svh - " + links.scrollHeight + "px)";
         links.style.height = esc.scrollHeight + "px";
 
         content.addEventListener("transitionend", function onExpand() {

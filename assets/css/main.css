@@ -32,7 +32,7 @@ h1 {
     padding: 20px;
 }
 
-.green:hover, .red {
+.red {
     color: #F4030B !important;
     text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
 }
@@ -46,8 +46,26 @@ h1 {
     border: 2px solid #00ff00 !important;
 }
 
-.green-border:hover {
-    border: 2px solid #F4030B !important;
+@media (hover: hover) {
+    .green:hover {
+        color: #F4030B !important;
+        text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
+    }
+
+    .green-border:hover {
+        border: 2px solid #F4030B !important;
+    }
+}
+
+@media (hover: none) {
+    .green:active {
+        color: #F4030B !important;
+        text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
+    }
+
+    .green-border:active {
+        border: 2px solid #F4030B !important;
+    }
 }
 
 @-moz-document url-prefix() {

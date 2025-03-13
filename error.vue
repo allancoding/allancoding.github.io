@@ -56,10 +56,22 @@ import type Typed from 'typed.js';
     text-shadow: 0 0 2px #00ff00, 0 0 10px #00ff00;
   }
 
-  .errorMessage span:hover{
-    cursor: pointer;
-    color: #ff0000;
-    text-shadow: 0 0 2px #ff0000, 0 0 10px #ff0000;
-    transition: all 0.2s ease;
+  .errorMessage span {
+      transition: all 0.2s ease;
+    }
+
+  @media (hover: hover) {
+    .errorMessage span:hover {
+      cursor: pointer;
+      color: #ff0000;
+      text-shadow: 0 0 2px #ff0000, 0 0 10px #ff0000;
+    }
+  }
+
+  @media (hover: none) {
+    .errorMessage span:active {
+      color: #ff0000;
+      text-shadow: 0 0 2px #ff0000, 0 0 10px #ff0000;
+    }
   }
 </style>
