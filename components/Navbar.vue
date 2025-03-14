@@ -10,10 +10,9 @@
     </a>
     <div class="links" id="navbarLinks">
         <div class="esc" id="navEsc" @click="checkShow">
-            <span><router-link to="/" exact-active-class="green">Home</router-link></span>
-            <span><router-link to="/portfolio" exact-active-class="green">Portfolio</router-link></span>
-            <span><router-link to="/websites" exact-active-class="green">Websites</router-link></span>
-            <span><router-link to="/contact" exact-active-class="green">Contact</router-link></span>
+            <span v-for="link in navLinks" :key="link.text">
+                <router-link :to="link.to" exact-active-class="green">{{ link.text }}</router-link>
+            </span>
         </div>
     </div>
     <a href="/" class="logo">
@@ -25,25 +24,35 @@
 
 <script>
 export default {
-  methods: {
-    checkShow: function () {
-        let navbarLinks = document.getElementById('navbarLinks');
-        var linkElements = navbarLinks.getElementsByTagName('a');
-        if (navbarLinks.classList.contains('responsive')) {
-            for (let i = 0; i < linkElements.length; i++) {
-                linkElements[i].classList.add("show");
-                console.log(linkElements[i]);
+    data() {
+        return {
+            navLinks: [
+                { text: 'Home', to: '/' },
+                { text: 'Portfolio', to: '/portfolio' },
+                { text: 'Websites', to: '/websites' },
+                { text: 'Contact', to: '/contact' }
+            ]
+        };
+    },
+    methods: {
+        checkShow: function () {
+            let navbarLinks = document.getElementById('navbarLinks');
+            var linkElements = navbarLinks.getElementsByTagName('a');
+            if (navbarLinks.classList.contains('responsive')) {
+                for (let i = 0; i < linkElements.length; i++) {
+                    linkElements[i].classList.add("show");
+                    console.log(linkElements[i]);
+                }
             }
         }
+    },
+    setup() {
+        useHead({
+            script: [
+                { src: '/js/navbar.js', defer: true }
+            ]
+        });
     }
-  },
-  setup() {
-    useHead({
-        script: [
-            { src: '/js/navbar.js', defer: true }
-        ]
-    });
-  }
 }
 </script>
 

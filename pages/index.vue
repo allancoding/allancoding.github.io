@@ -3,7 +3,7 @@
 </style>
 
 <template>
-    <div>
+    <div class="homePage">
         <div class="columns">
             <div class="column main-logo">
                 <img src="/logos/allancoding.png" alt="logo" />

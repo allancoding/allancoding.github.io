@@ -1,6 +1,6 @@
 <script setup lang="ts">
   import type { NuxtError } from '#app'
-import type Typed from 'typed.js';
+  import type Typed from 'typed.js';
   
   const props = defineProps({
     error: Object as () => NuxtError
@@ -34,17 +34,10 @@ import type Typed from 'typed.js';
   }
 </script>
 <template>
-  <canvas id="cnv"></canvas>
-  <Navbar />
-  <div class="content" id="content">
-    <div class="home">
-      <div class="main">
-        <h1 class="errorMessage"><span @click="runErrorMessage(false)"><span id="errorMessage">&#8203;</span></span></h1>
-        <UIButton :link="'/'">Go Home</UIButton>
-      </div>
-      <Footer/>
-    </div>
-  </div>
+  <NuxtLayout>
+    <h1 class="errorMessage"><span @click="runErrorMessage(false)"><span id="errorMessage">&#8203;</span></span></h1>
+    <UIButton :link="'/'">Go Home</UIButton>
+  </NuxtLayout>
 </template>
 
 <style scoped>

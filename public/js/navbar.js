@@ -18,8 +18,8 @@ function toggleNavbar(close) {
     }
     
     if (isShowing || close) {
-        home.style.height = "calc(100svh - 110px)";
-        home.style.minHeight = "calc(100svh - 110px)";
+        home.style.height = "calc(100svh - 50px)";
+        home.style.minHeight = "calc(100svh - 50px)";
         content.addEventListener("transitionend", function onCollapse() {
             links.classList.remove("responsive");
             icon.classList.remove("responsive");
@@ -29,7 +29,7 @@ function toggleNavbar(close) {
     } else {
         icon.classList.add("responsive");
         links.classList.add("responsive");
-        home.style.height = "calc(100svh - 110px - " + links.scrollHeight + "px)";
+        home.style.height = "calc(100svh - " + links.scrollHeight + "px)";
         home.style.minHeight = "calc(100svh - " + links.scrollHeight + "px)";
         links.style.height = esc.scrollHeight + "px";
 
