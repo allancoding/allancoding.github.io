@@ -1,0 +1,20 @@
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+}
+
+.card-grid > * {
+    flex: 1 1 350px;
+    max-width: 350px;
+}
+
+@media screen and (max-width: 600px) {
+    .card-grid > * {
+        flex: 1 1 250px;
+        max-width: 250px;
+    }
+}

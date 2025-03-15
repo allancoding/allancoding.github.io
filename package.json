@@ -1,0 +1,31 @@
+{
+  "name": "allancoding.dev",
+  "version": "1.2.0",
+  "description": "My website and portfolio",
+  "main": "index.js",
+  "repository": "https://github.com/allancoding/allancoding.dev.git",
+  "author": "Allan Niles <allancoding.dev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^1.11.0",
+    "@nuxt/image": "1.9.0",
+    "jquery": "^3.7.1",
+    "nuxt": "^3.16.0",
+    "nuxt-typedjs": "^1.2.0",
+    "textsplitr": "^0.1.1",
+    "vue": "^3.5.13",
+    "vue-typed-js": "^0.1.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "devDependencies": {
+    "@iconify-json/charm": "^1.2.2",
+    "@iconify-json/line-md": "^1.2.5"
+  }
+}

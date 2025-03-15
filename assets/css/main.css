@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Code", monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    text-wrap: pretty;
+}
+
+.home .page {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+h1 {
+    margin: 0;
+    padding: 20px;
+}
+
+.red {
+    color: #F4030B !important;
+    text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
+}
+
+.green {
+    color: #00ff00 !important;
+    text-shadow: 0 0 1px #00ff00, 0 0 3px #00ff00 !important;
+}
+
+.green-border {
+    border: 2px solid #00ff00 !important;
+}
+
+@media (hover: hover) {
+    .green:hover {
+        color: #F4030B !important;
+        text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
+    }
+
+    .green-border:hover {
+        border: 2px solid #F4030B !important;
+    }
+}
+
+@media (hover: none) {
+    .green:active {
+        color: #F4030B !important;
+        text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
+    }
+
+    .green-border:active {
+        border: 2px solid #F4030B !important;
+    }
+}
+
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin;
+    }
+}
+
+* {
+    scrollbar-color: rgba(79, 254, 0, 0.3) transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(79, 254, 0, 0.3);
+    border-radius: 10px;
+}
+
+.button {
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid #F4030B;
+    color: #F4030B;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9em;
+    font-family: inherit;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #00ff00;
+    color: #00ff00;
+}
+
+a {
+    color: #F4030B;
+    text-shadow: 0 0 1px #F4030B, 0 0 5px #F4030B;
+    transition: all 0.2s ease;
+}
+
+.readme {
+    text-shadow: none;
+}
+
+a:hover {
+    color: #00ff00;
+    text-shadow: 0 0 1px #00ff00, 0 0 5px #00ff00;
+}
+
+.readme img {
+    max-width: 100%;
+}
+
+.readme .badges img {
+    margin-left: 5px;
+}
+
+.warning {
+    color: #e2ad00;
+    text-shadow: none;
+    display: inline;
+    white-space: nowrap;
+    transition: all 1.5s linear;
+    border: 1px solid #e2ad00;
+    border-radius: 25px;
+    font-size: 0.6em;
+    padding: 2.5px 5px;
+    margin: 0px 10px;
+    text-wrap: none;
+}

@@ -1,0 +1,86 @@
+.homePage {
+    padding-top: 60px;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.main-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.main-logo img {
+    width: 80%;
+    max-width: 350px;
+    padding: 40px 25px;
+    animation: gradient-drop-shadow 4s ease infinite;
+}
+
+@keyframes gradient-drop-shadow {
+  0%,
+  100% {
+    transform: scale(0.97);
+    filter: drop-shadow(0px 0px 5px rgba(6, 50, 120, 0.65)) 
+            drop-shadow(0px 0px 10px rgba(81, 20, 115, 0.65)) 
+            drop-shadow(0px 0px 15px rgba(22, 72, 116, 0.65));
+  }
+  50% {
+    transform: scale(1);
+    filter: drop-shadow(0px 0px 20px rgba(6, 50, 120, 0.65)) 
+            drop-shadow(0px 0px 30px rgba(81, 20, 115, 0.65)) 
+            drop-shadow(0px 0px 40px rgba(22, 72, 116, 0.65));
+  }
+}
+
+.social {
+    padding-top: 30px;
+}
+
+.social span {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: #F4030B;
+    transition: all 0.2s ease;
+}
+
+.social span:hover {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .social {
+        padding-top: 30px;
+    }
+
+    .social span:hover {
+        color: #F4030B;
+    }
+
+    .social span:active {
+        color: #00ff00;
+    }
+}
+
+.typing {
+    padding-bottom: 15px;
+}
