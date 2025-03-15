@@ -60,25 +60,25 @@
             <Content :title="'README.md'">
                 <div class="readme">
                     <h3>Hi there 👋</h3>
-                    <p><img src="/v1/typing.svg"></img></p>
-                    <p class="badges"><img
+                    <p><img alt="Typing" src="/v1/typing.svg"></img></p>
+                    <p class="badges"><img alt="Badge"
                             src="https://komarev.com/ghpvc/?username=allancoding&color=brightgreen">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/badge/Discord-allancoding-brightgreen/?logo=discord&color=7289DA">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/badge/Editor-VS%20Code-brightgreen/?logo=visualstudiocode&logoColor=blue&color=blue">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/badge/Knows-JavaScript-brightgreen/?logo=javascript&logoColor=warning&color=yellow">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/badge/Knows-HTML-brightgreen/?logo=html5&logoColor=warning&color=orange">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/badge/Knows-JAVA-brightgreen/?logo=java&logoColor=red&color=red">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/badge/Knows-MarkDown-brightgreen?logo=markdown&color=fff">
-                        <img
+                        <img alt="Badge"
                             src="https://img.shields.io/github/sponsors/allancoding?label=Sponsors&logo=githubsponsors&style=flat">
                     </p>
-                    <img
+                    <img alt="Snake"
                         src="https://raw.githubusercontent.com/allancoding/allancoding/output/github-contribution-grid-snake-dark.svg#gh-dark-mode-only">
                     <p> </p>
                     <p>📫 How to reach me:</p>
@@ -111,22 +111,22 @@
                                 href="https://web.archive.org/web/20231225133919/http://live.codechangers.com/aniles/">website</a>
                         </li>
                     </ul>
-                    <p><img src="https://discord-readme-badge.vercel.app/api?id=893621402496806975"></p>
+                    <p><img alt="Badge" src="https://discord-readme-badge.vercel.app/api?id=893621402496806975"></p>
                     <p>
-                        <img
+                        <img alt="Status"
                             src="https://github-readme-stats-allancoding.vercel.app/api?username=allancoding&count_private=true&border_radius=8&theme=tokyonight&include_all_commits=true">
                     </p>
                     <p>
-                        <img
+                        <img alt="Status"
                             src="https://github-readme-stats-allancoding.vercel.app/api/top-langs/?username=allancoding&langs_count=20&layout=compact&theme=tokyonight">
                     </p>
                     <p>
-                        <img src="https://allancoding-github-readme-streak-stats.vercel.app/?user=allancoding&theme=tokyonight">
+                        <img alt="Status" src="https://allancoding-github-readme-streak-stats.vercel.app/?user=allancoding&theme=tokyonight">
                     </p>
                     <p>
-                        <img :src="trophySrc">
+                        <img alt="Trophy" :src="trophySrc">
                     </p>
-                    <p style="margin-bottom: 0;"><img src="https://readme-jokes.vercel.app/api?theme=tokyonight"></p>
+                    <p style="margin-bottom: 0;"><img alt="Jokes" src="https://readme-jokes.vercel.app/api?theme=tokyonight"></p>
                     <p style="float:left; margin-top: 0;">
                         <a href="https://stackexchange.com/users/18796553">
                             <img src="https://stackexchange.com/users/flair/18796553.png?theme=dark" width="208" alt="profile for Allancoding on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Allancoding on Stack Exchange, a network of free, community-driven Q&amp;A sites">
