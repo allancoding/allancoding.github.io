@@ -14,9 +14,10 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/icon": "^1.10.3",
+    "@nuxt/icon": "^1.11.0",
+    "@nuxt/image": "1.9.0",
     "jquery": "^3.7.1",
-    "nuxt": "^3.12.4",
+    "nuxt": "^3.16.0",
     "nuxt-typedjs": "^1.2.0",
     "textsplitr": "^0.1.1",
     "vue": "^3.5.13",

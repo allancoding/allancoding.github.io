@@ -26,9 +26,10 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
   
-  modules: ["nuxt-typedjs", "@nuxt/icon"],
+  modules: ["nuxt-typedjs", "@nuxt/icon", '@nuxt/image'],
   plugins: [
     '~/plugins/matrixEffect.client.js',
+    '~/plugins/scrollToTop.client.js',
     '~/plugins/title.js'
   ],
 })

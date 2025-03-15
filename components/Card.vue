@@ -4,13 +4,13 @@
 
 <template>
     <div class="card">
-        <img :src="image" alt="Card image" class="card-image" />
+        <NuxtImg :src="image" alt="Card image" format="webp" quality="100" class="card-image" placeholder-class="card-image-blur" :placeholder="[769, 458, 100]" preload/>
         <div class="card-content">
-            <h3>{{ title }}</h3>
+            <h3 v-html="title"></h3>
             <p>{{ discription }}</p>
         </div>
         <div class="buttons">
-            <UIButton v-for="button in buttons" :key="button.text" :link="button.link" :linkTarget="button.target" :customClass="'green green-border'">{{ button.text }}</UIButton>
+            <UIButton v-for="button in buttons" :key="button.text" :link="button.link" :linkTarget="button.target" :customClass="'green green-border'" :html="button.text"></UIButton>
         </div>
     </div>
 </template>

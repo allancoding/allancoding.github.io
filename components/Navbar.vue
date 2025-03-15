@@ -11,13 +11,13 @@
     <div class="links" id="navbarLinks">
         <div class="esc" id="navEsc" @click="checkShow">
             <span v-for="link in navLinks" :key="link.text">
-                <router-link :to="link.to" exact-active-class="green">{{ link.text }}</router-link>
+                <router-link :to="link.to" exact-active-class="green" onclick="toggleNavbar(true, 100)">{{ link.text }}</router-link>
             </span>
         </div>
     </div>
     <a href="/" class="logo">
-      <img src="/logos/allancoding.png" id="main-logo" alt="Logo" />
-      Allan Coding!
+        <NuxtImg src="/logos/allancoding.png" id="main-logo" alt="Logo" format="webp" quality="100" />
+        Allan Coding!
     </a>
   </div>
 </template>
@@ -95,7 +95,7 @@ export default {
     color: #F4030B;
 }
 
-.navbar a:active {
+.navbar a:active, .links *:active{
     -webkit-tap-highlight-color: transparent;
 }
 

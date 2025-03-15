@@ -35,7 +35,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         setInterval(redraw, 50);
     };
     nuxtApp.hook('app:error', runScript);
-    nuxtApp.hook('page:finish', runScript);
+    nuxtApp.hook("page:finish", runScript);
 });
 
 const characters = [];

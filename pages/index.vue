@@ -6,7 +6,7 @@
     <div class="homePage">
         <div class="columns">
             <div class="column main-logo">
-                <img src="/logos/allancoding.png" alt="logo" />
+                <NuxtImg src="/logos/allancoding.png" alt="Logo" format="png" quality="100" />
             </div>
             <div class="column">
                 <h1>Hello, my name is <span class="red">Allan</span></h1>
