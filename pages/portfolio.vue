@@ -5,6 +5,18 @@
 <template>
     <div class="page">
         <h1>Portfolio</h1>
+        <Content title="Certificates">
+            <div class="card-grid">
+                <Card
+                    v-for="project in projects.certs"
+                    :key="project.id"
+                    :title="project.title"
+                    :image="project.image"
+                    :discription="project.discription"
+                    :buttons="project.buttons"
+                />
+            </div>
+        </Content>
         <Content title="Projects" subText="Here are some of my projects">
             <div class="card-grid">
                 <Card
@@ -73,6 +85,73 @@ const { $setTitle } = useNuxtApp();
 $setTitle('Portfolio');
 
 const projects = {
+    certs: [
+        {
+            id: 1,
+            title: 'Microsoft Word',
+            image: '/certs/Word-2019.png',
+            discription: 'Microsoft Office Specialist: Word Associate',
+            buttons: [
+                {
+                    text: 'View',
+                    link: 'https://www.credly.com/badges/731128fe-9f6f-4890-8fea-4f5c2104fb03',
+                    target: '_blank'
+                }
+            ]
+        },
+        {
+            id: 2,
+            title: 'Microsoft Excel',
+            image: '/certs/Excel-2019.png',
+            discription: 'Microsoft Office Specialist: Excel Associate',
+            buttons: [
+                {
+                    text: 'View',
+                    link: 'https://www.credly.com/badges/99501786-1ace-4882-93d4-d7c492865480',
+                    target: '_blank'
+                }
+            ]
+        },
+        {
+            id: 3,
+            title: 'Microsoft Powerpoint',
+            image: '/certs/Powerpoint-2019.png',
+            discription: 'Microsoft Office Specialist: Powerpoint Associate',
+            buttons: [
+                {
+                    text: 'View',
+                    link: 'https://www.credly.com/badges/fe6b5e6f-b09d-4d8b-b39b-9507773f6c72',
+                    target: '_blank'
+                }
+            ]
+        },
+        {
+            id: 4,
+            title: 'Microsoft Office',
+            image: '/certs/Microsoft-Office-Specialist-Associate-2019.png',
+            discription: 'Microsoft Office Specialist: Associate',
+            buttons: [
+                {
+                    text: 'View',
+                    link: 'https://www.credly.com/badges/870cda15-7057-4f1d-98a9-d65a0f1d7f78',
+                    target: '_blank'
+                }
+            ]
+        },
+        {
+            id: 5,
+            title: 'TestOut Office Pro',
+            image: '/certs/Testout-Office-Pro.png',
+            discription: 'TestOut Pro Certification',
+            buttons: [
+                {
+                    text: 'View',
+                    link: 'https://certification.testout.com/verifycert/6-2C6-VWNM3H',
+                    target: '_blank'
+                }
+            ]
+        }
+    ],
     projects: [
         {
             id: 1,

@@ -679,7 +679,7 @@
     which "^5.0.0"
     ws "^8.18.1"
 
-"@nuxt/icon@^1.10.3":
+"@nuxt/icon@^1.11.0":
   version "1.11.0"
   resolved "https://registry.yarnpkg.com/@nuxt/icon/-/icon-1.11.0.tgz#f5494a92864e6bf084a4ecb6b2896af6be3ca738"
   integrity sha512-j82YbT7/Z02W/6jhiMoXHdtpSsCBfAoI3EkJ5Axi0C30ALiqvmrmfwd+CG7dftyncj51goBi1YMb6I4vNHK9nA==
@@ -3499,7 +3499,7 @@ nuxt-typedjs@^1.2.0:
     "@nuxt/kit" "^3.15.0"
     typed.js "2.0.12"
 
-nuxt@^3.12.4:
+nuxt@^3.16.0:
   version "3.16.0"
   resolved "https://registry.yarnpkg.com/nuxt/-/nuxt-3.16.0.tgz#07e23f1e4636dcc2807587080110034f9cef7699"
   integrity sha512-4j2tuHo+kcComQ1WrCD+i1w3UFOHrcnNH30cwiEY/WZZlBZOlC6DtUm6aBjhfpBFaMYsF4PbyKsNW+7FHwckHA==

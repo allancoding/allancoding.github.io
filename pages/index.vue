@@ -111,6 +111,13 @@
                                 href="https://web.archive.org/web/20231225133919/http://live.codechangers.com/aniles/">website</a>
                         </li>
                     </ul>
+                    <h4>My Certificates:</h4>
+                    <NuxtImg src="/certs/Word-2019.png" alt="word" width="125px" format="webp" quality="100"/>
+                    <NuxtImg src="/certs/Excel-2019.png" alt="excel" width="125px" format="webp" quality="100" style="padding-left: 5px;"/>
+                    <NuxtImg src="/certs/Powerpoint-2019.png" alt="powerpoint" width="125px" format="webp" quality="100" style="padding-left: 5px;"/>
+                    <NuxtImg src="/certs/Microsoft-Office-Specialist-Associate-2019.png" alt="microsoft-office" width="125px" format="webp" quality="100" style="padding-left: 5px;"/>
+                    <NuxtImg src="/certs/Testout-Office-Pro.png" alt="testout-office-pro" width="125px" format="webp" quality="100" style="padding-left: 5px;"/>
+                    <h4>Status:</h4>
                     <p><img alt="Badge" src="https://discord-readme-badge.vercel.app/api?id=893621402496806975"></p>
                     <p>
                         <img alt="Status"
