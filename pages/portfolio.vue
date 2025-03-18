@@ -5,7 +5,7 @@
 <template>
     <div class="page">
         <h1>Portfolio</h1>
-        <Content title="Certificates">
+        <Content title="Certificates" subText="Here are my curent IT certifications">
             <div class="card-grid">
                 <Card
                     v-for="project in projects.certs"
@@ -89,7 +89,7 @@ const projects = {
         {
             id: 1,
             title: 'Microsoft Word',
-            image: '/certs/Word-2019.png',
+            image: '/projects/Word-2019.png',
             discription: 'Microsoft Office Specialist: Word Associate',
             buttons: [
                 {
@@ -102,7 +102,7 @@ const projects = {
         {
             id: 2,
             title: 'Microsoft Excel',
-            image: '/certs/Excel-2019.png',
+            image: '/projects/Excel-2019.png',
             discription: 'Microsoft Office Specialist: Excel Associate',
             buttons: [
                 {
@@ -115,7 +115,7 @@ const projects = {
         {
             id: 3,
             title: 'Microsoft Powerpoint',
-            image: '/certs/Powerpoint-2019.png',
+            image: '/projects/Powerpoint-2019.png',
             discription: 'Microsoft Office Specialist: Powerpoint Associate',
             buttons: [
                 {
@@ -128,7 +128,7 @@ const projects = {
         {
             id: 4,
             title: 'Microsoft Office',
-            image: '/certs/Microsoft-Office-Specialist-Associate-2019.png',
+            image: '/projects/Microsoft-Office-Specialist-Associate-2019.png',
             discription: 'Microsoft Office Specialist: Associate',
             buttons: [
                 {
@@ -141,7 +141,7 @@ const projects = {
         {
             id: 5,
             title: 'TestOut Office Pro',
-            image: '/certs/Testout-Office-Pro.png',
+            image: '/projects/Testout-Office-Pro.png',
             discription: 'TestOut Pro Certification',
             buttons: [
                 {

@@ -4,7 +4,7 @@
 
 <template>
     <div class="card">
-        <NuxtImg :src="image" sizes="100vw sm:300px md:500px" alt="Card image" format="webp" width="" quality="100" class="card-image" placeholder-class="card-image-blur" :placeholder="[769, 458, 80]" preload/>
+        <NuxtImg :src="image" sizes="100vw sm:300px md:500px" alt="Card image" format="webp" width="" quality="100" class="card-image" placeholder-class="card-image-blur" :placeholder="[769, 458, 50]" preload/>
         <div class="card-content">
             <h3 v-html="title"></h3>
             <p>{{ discription }}</p>
