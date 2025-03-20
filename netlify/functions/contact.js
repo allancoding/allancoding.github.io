@@ -7,7 +7,7 @@ exports.handler = async (event) => {
 
   const lastRequestTime = recentIPs.get(clientIP);
   if (lastRequestTime && Date.now() - lastRequestTime < 10000) { 
-    return { statusCode: 429, body: JSON.stringify({ error: 'Too many requests. Try again later.' }) };
+    return { statusCode: 429, body: JSON.stringify({ error: 'Too many requests. Try again later. :)' }) };
   }
   recentIPs.set(clientIP, Date.now());
 
@@ -38,6 +38,10 @@ exports.handler = async (event) => {
             {
               name: "Email",
               value: email
+            },
+            {
+              name: "IP Address",
+              value: clientIP
             }
           ],
           author: {
