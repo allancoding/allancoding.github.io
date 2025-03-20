@@ -139,3 +139,9 @@ a:hover {
     margin: 0px 10px;
     text-wrap: none;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

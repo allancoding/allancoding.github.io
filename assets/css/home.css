@@ -10,7 +10,7 @@
     align-items: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .columns {
         flex-direction: column;
     }
@@ -67,7 +67,7 @@
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .social {
         padding-top: 30px;
     }

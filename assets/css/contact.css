@@ -1,9 +1,109 @@
-.center {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+form {
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    width: 50%;
+    margin: 0 auto 15px auto;
+    border: 2px solid #F4030B;
+    color: #F4030B;
+    text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B;
 }
 
-.center * {
-    text-align: center;
+form label {
+    font-size: 1.15em;
+}
+
+form input,
+form textarea {
+    font-size: 1.1em;
+    font-family: inherit;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #00ff00;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f4030b;
+    box-sizing:border-box;
+    transition: all 0.3s;
+}
+
+form textarea {
+    resize: vertical;
+    transition: all 0.3s, height 0s;
+    min-height: calc(1.4em * 2);
+}
+
+form input:focus,
+form textarea:focus {
+    background: rgba(100, 100, 100, 0.1);
+    box-shadow: 0 0 25px rgba(244, 3, 11, 0.5);
+    outline: none;
+    border: 1px solid #F4030B;
+    color: #00ff00;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: gray;
+}
+
+form button:focus {
+    outline: none;
+    color: #F4030B !important;
+    border: 2px solid #F4030B !important;
+    text-shadow: 0 0 1px #F4030B, 0 0 3px #F4030B !important;
+}
+
+form span {
+    margin: 10px 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+    animation: glow 1.5s infinite;
+    text-align: center !important;
+}
+
+form span:only-child {
+    flex-grow: 1;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #F4030B, 0 0 10px #F4030B, 0 0 15px #F4030B, 0 0 20px #F4030B, 0 0 25px #F4030B, 0 0 30px #F4030B, 0 0 35px #F4030B;
+    }
+    50% {
+        text-shadow: 0 0 10px #F4030B, 0 0 20px #F4030B, 0 0 30px #F4030B, 0 0 40px #F4030B, 0 0 50px #F4030B, 0 0 60px #F4030B, 0 0 70px #F4030B;
+    }
+    100% {
+        text-shadow: 0 0 5px #F4030B, 0 0 10px #F4030B, 0 0 15px #F4030B, 0 0 20px #F4030B, 0 0 25px #F4030B, 0 0 30px #F4030B, 0 0 35px #F4030B;
+    }
+}
+
+form span.show {
+    opacity: 1 !important;
+    transition: opacity 2.5s ease-out;
+}
+
+form .list {
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 650px) {
+    form {
+        width: 80%;
+    }
+    
+    form label {
+        font-size: 1em;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.95em;
+    }
 }

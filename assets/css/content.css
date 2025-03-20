@@ -31,7 +31,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .module {
         width: 70svw;
         padding: 15px 35px;

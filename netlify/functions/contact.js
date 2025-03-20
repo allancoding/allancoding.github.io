@@ -59,7 +59,9 @@ exports.handler = async (event) => {
       body: JSON.stringify(payload),
     });
 
-    if (!response.ok) {
+    if (response.ok) {
+      console.log(`Message sent: ${name} - ${email}`);
+    } else if (!response.ok) {
       throw new Error(`Discord webhook error: ${response.statusText}`);
     }
 

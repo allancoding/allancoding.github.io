@@ -125,7 +125,7 @@ export default {
     filter: drop-shadow(0 0 8px #00ff00);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .links {
         float: left;
         display: block !important;
