@@ -72,6 +72,9 @@ const deleteFormFields = async () => {
 
 const handleInput = () => {
     fadeOut.value = false;
+    setTimeout(() => {
+        message.value = '';
+    }, 1000);
 };
 
 const capitalizeWords = () => {

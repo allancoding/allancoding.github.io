@@ -3,8 +3,7 @@ const recentIPs = new Map();
 
 exports.handler = async (event, context) => {
   const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
-  const clientIP = event.headers['x-forwarded-for'] || event.headers['X-Forwarded-For'];
-  console.log(`Request from IP: ${clientIP}`);
+  const clientIP = (event.headers['x-forwarded-for'] || event.headers['X-Forwarded-For'] || '').split(',')[0].trim();
 
   const lastRequestTime = recentIPs.get(clientIP);
   if (lastRequestTime && Date.now() - lastRequestTime < 5000) { 
