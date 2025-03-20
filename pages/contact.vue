@@ -37,8 +37,8 @@ const form = ref({
     message: ''
 });
 
-const message = ref('');
-const fadeOut = ref(true);
+const message = ref('Sample error message!');
+const fadeOut = ref(false);
 
 const submitForm = async () => {
     try {
@@ -52,6 +52,8 @@ const submitForm = async () => {
         if (response.ok) {
             message.value = 'Message sent successfully!';
             deleteFormFields();
+        } else if (response.status === 429) {
+            message.value = 'Your ip has been rate limited. Try Again';
         } else {
             message.value = 'Failed to send message.';
         }
@@ -72,9 +74,6 @@ const deleteFormFields = async () => {
 
 const handleInput = () => {
     fadeOut.value = false;
-    setTimeout(() => {
-        message.value = '';
-    }, 1000);
 };
 
 const capitalizeWords = () => {
