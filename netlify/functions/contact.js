@@ -1,12 +1,13 @@
 const fetch = require('node-fetch');
 const recentIPs = new Map();
 
-exports.handler = async (event) => {
+exports.handler = async (event, context) => {
   const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
-  const clientIP = event.headers['client-ip'] || 'unknown';
+  const clientIP = event.headers['x-forwarded-for'] || event.headers['X-Forwarded-For'];
+  console.log(`Request from IP: ${clientIP}`);
 
   const lastRequestTime = recentIPs.get(clientIP);
-  if (lastRequestTime && Date.now() - lastRequestTime < 10000) { 
+  if (lastRequestTime && Date.now() - lastRequestTime < 5000) { 
     return { statusCode: 429, body: JSON.stringify({ error: 'Too many requests. Try again later. :)' }) };
   }
   recentIPs.set(clientIP, Date.now());
