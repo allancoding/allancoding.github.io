@@ -42,6 +42,8 @@ const fadeOut = ref(true);
 
 const submitForm = async () => {
     try {
+        fadeOut.value = true;
+        message.value = 'Sending...';
         const response = await fetch('/.netlify/functions/contact', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -53,7 +55,6 @@ const submitForm = async () => {
         } else {
             message.value = 'Failed to send message.';
         }
-        fadeOut.value = true;
     } catch (error) {
         message.value = 'An error occurred: ' + error.message;
     }
