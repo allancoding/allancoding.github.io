@@ -8,13 +8,13 @@
             <div class="center">
                 <form @submit.prevent="submitForm">
                     <label for="name">Name:</label><br/>
-                    <input type="text" id="name" placeholder="Rick" autocapitalize="words" @input="capitalizeWords(); handleInput();" v-model="form.name" required>
+                    <input type="text" id="name" placeholder="Rick" autocapitalize="words" @input="capitalizeWords(); handleInput();" v-model="form.name" maxlength="256" required>
                     <label for="email">Email:</label><br/>
-                    <input type="email" id="email" placeholder="rolling.astley@gmail.com" @input="handleInput" v-model="form.email" required>
+                    <input type="email" id="email" placeholder="rolling.astley@gmail.com" @input="handleInput" v-model="form.email" maxlength="256" required>
                     <label for="subject">Subject:</label><br/>
-                    <input type="text" id="subject" placeholder="I'm Never!" @input="capitalizeWords(); handleInput();" v-model="form.subject" required>
+                    <input type="text" id="subject" placeholder="I'm Never!" @input="capitalizeWords(); handleInput();" v-model="form.subject" maxlength="256" required>
                     <label for="message">Message:</label><br/>
-                    <textarea id="message" rows="5" v-model="form.message" @input="capitalizeSentences(); handleInput();" placeholder="Gonna give you up." required></textarea><br/>
+                    <textarea id="message" rows="5" v-model="form.message" @input="capitalizeSentences(); handleInput();" placeholder="Gonna give you up." maxlength="4096" required></textarea><br/>
                     <div class="list">
                         <button type="submit" class="button green green-border" @click="$event.target.blur()">Send</button>
                         <span :class="{ 'show': fadeOut }">{{ message }}</span>
