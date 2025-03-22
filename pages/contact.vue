@@ -12,9 +12,9 @@
                     <label for="email">Email:</label><br/>
                     <input type="email" id="email" placeholder="rolling.astley@gmail.com" @input="handleInput" v-model="form.email" maxlength="256" required>
                     <label for="subject">Subject:</label><br/>
-                    <input type="text" id="subject" placeholder="I'm Never!" @input="capitalizeWords(); handleInput();" v-model="form.subject" maxlength="256" required>
+                    <input type="text" id="subject" autocapitalize="words" placeholder="I'm Never!" @input="capitalizeWords(); handleInput();" v-model="form.subject" maxlength="256" required>
                     <label for="message">Message:</label><br/>
-                    <textarea id="message" rows="5" v-model="form.message" @input="capitalizeSentences(); handleInput();" placeholder="Gonna give you up." maxlength="4096" required></textarea><br/>
+                    <textarea id="message" rows="5" autocapitalize="on" v-model="form.message" @input="capitalizeSentences(); handleInput();" placeholder="Gonna give you up." maxlength="4096" required></textarea><br/>
                     <div class="list">
                         <button type="submit" class="button green green-border" @click="$event.target.blur()">Send</button>
                         <span :class="{ 'show': fadeOut }">{{ message }}</span>
@@ -77,8 +77,8 @@ const handleInput = () => {
 };
 
 const capitalizeWords = () => {
-    form.value.name = form.value.name.replace(/\b\w/g, c => c.toUpperCase());
-    form.value.subject = form.value.subject.replace(/\b\w/g, c => c.toUpperCase());
+    form.value.name = form.value.name.replace(/(^\w|\s\w)/g, c => c.toUpperCase());
+    form.value.subject = form.value.subject.replace(/(^\w|\s\w)/g, c => c.toUpperCase());
 };
 
 const capitalizeSentences = () => {
