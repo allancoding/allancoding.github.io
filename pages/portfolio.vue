@@ -183,7 +183,7 @@ const projects = {
             id: 7,
             title: 'Kill Net',
             image: '/projects/kill-net.png',
-            discription: 'A script to overwhelm/flood the connected network with traffic using zmap basically it kills it.',
+            discription: 'A script to overwhelm/flood the connected network with traffic using zmap, effectively killing it.',
             buttons: [
                 {
                     text: 'Github',
@@ -278,7 +278,7 @@ const projects = {
             id: 1,
             title: 'Ascii Games',
             image: '/projects/AsciiGames.png',
-            discription: 'A game manager for all of your java ascii games. It is super easy to add games to the manager.',
+            discription: 'A game manager for all your java ascii games. It is super easy to add games to the manager.',
             buttons: [
                 {
                     text: 'Github',
@@ -306,7 +306,7 @@ const projects = {
             id: 1,
             title: 'EmulatorJS Docs',
             image: '/projects/emulatorjs.org.png',
-            discription: 'The official website for the EmulatorJS project',
+            discription: 'The official website for the EmulatorJS project.',
             buttons: [
                 {
                     text: 'Docs',
@@ -324,7 +324,7 @@ const projects = {
             id: 2,
             title: 'Allan Coding',
             image: '/projects/allancoding.dev.png',
-            discription: 'My personal portfolio website',
+            discription: 'My personal portfolio website.',
             buttons: [
                 {
                     text: "You're here",
@@ -359,7 +359,7 @@ const projects = {
             id: 4,
             title: 'EmulatorJS Demo',
             image: '/projects/demo.emulatorjs.org.png',
-            discription: 'The demo page for EmulatorJS',
+            discription: 'The demo page for EmulatorJS.',
             buttons: [
                 {
                     text: 'Try Demo',
@@ -377,7 +377,7 @@ const projects = {
             id: 5,
             title: 'Chrome Racer',
             image: '/projects/racer.allancoding.dev.png',
-            discription: 'Reverse engineered Chrome Experiment RACER',
+            discription: 'Reverse engineered Chrome Experiment RACER.',
             buttons: [
                 {
                     text: 'Play',
@@ -395,7 +395,7 @@ const projects = {
             id: 6,
             title: 'Minecraft',
             image: '/projects/allancoding-minecraft.netlify.app.png',
-            discription: 'Minecraft versions ported to the web',
+            discription: 'Minecraft versions ported to the web.',
             buttons: [
                 {
                     text: 'Play',
@@ -477,7 +477,7 @@ const projects = {
             id: 1,
             title: 'EmulatorJS',
             image: '/projects/emulatorjs.png',
-            discription: 'The home of the EmulatorJS project',
+            discription: 'The home of the EmulatorJS project.',
             buttons: [
                 {
                     text: 'Github',
@@ -490,7 +490,7 @@ const projects = {
             id: 2,
             title: 'Perfect Paradox Team 8400',
             image: '/projects/perfectparadox8400.png',
-            discription: 'A FIRST FTC Team',
+            discription: 'A FIRST FTC Team.',
             buttons: [
                 {
                     text: 'Github',
@@ -503,7 +503,7 @@ const projects = {
             id: 3,
             title: 'PrismOS',
             image: '/projects/penguin.png',
-            discription: 'A cool linux distro',
+            discription: 'A cool linux distro.',
             buttons: [
                 {
                     text: 'Github',
@@ -516,7 +516,7 @@ const projects = {
             id: 4,
             title: 'Discerna',
             image: '/projects/discerna.png',
-            discription: 'An organization focusing on better education tools',
+            discription: 'An organization focusing on better education tools.',
             buttons: [
                 {
                     text: 'Github',
@@ -531,7 +531,7 @@ const projects = {
             id: 1,
             title: 'The Game Board',
             image: '/projects/the-game-board.png',
-            discription: 'Multiple games put into one file for the microbit',
+            discription: 'Multiple games put into one file for the microbit.',
             buttons: [
                 {
                     text: 'Github',
@@ -544,7 +544,7 @@ const projects = {
             id: 2,
             title: 'Rock Paper Scissors',
             image: '/projects/rock-paper-scissors.png',
-            discription: 'You can play rock paper scissors with 2 microbits',
+            discription: 'You can play rock paper scissors with 2 microbits.',
             buttons: [
                 {
                     text: 'Github',
