@@ -155,7 +155,7 @@ $setTitle('');
 
 const updateImageUrl = () => {
     const columns = Math.min(11, Math.floor(window.innerWidth / 130));
-    trophySrc.value = `https://github-profile-trophy.vercel.app/?username=allancoding&theme=tokyonight&no-frame=true&margin-w=15&margin-h=15&row=11&column=${columns}`;
+    trophySrc.value = `https://github-profile-trophy-allancoding.vercel.app/?username=allancoding&theme=tokyonight&no-frame=true&margin-w=15&margin-h=15&row=11&column=${columns}`;
 };
 
 onMounted(() => {
